@@ -1,0 +1,18 @@
+[2025-12-17T08:05:53.433+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-17T08:05:53.461+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_extract_only.transform_weather manual__2025-12-17T08:05:49.762380+00:00 [queued]>
+[2025-12-17T08:05:53.470+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_extract_only.transform_weather manual__2025-12-17T08:05:49.762380+00:00 [queued]>
+[2025-12-17T08:05:53.470+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-12-17T08:05:53.520+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): transform_weather> on 2025-12-17 08:05:49.762380+00:00
+[2025-12-17T08:05:53.544+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_extract_only', 'transform_weather', 'manual__2025-12-17T08:05:49.762380+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/weather_extract_only.py', '--cfg-path', '/tmp/tmpbu5i6yob']
+[2025-12-17T08:05:53.549+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask transform_weather
+[2025-12-17T08:05:53.550+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1243) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T08:05:53.552+0000] {standard_task_runner.py:72} INFO - Started process 1248 to run task
+[2025-12-17T08:05:53.671+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_extract_only.transform_weather manual__2025-12-17T08:05:49.762380+00:00 [running]> on host 1373fe423978
+[2025-12-17T08:05:53.830+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_extract_only' AIRFLOW_CTX_TASK_ID='transform_weather' AIRFLOW_CTX_EXECUTION_DATE='2025-12-17T08:05:49.762380+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-17T08:05:49.762380+00:00'
+[2025-12-17T08:05:53.832+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-17T08:05:53.837+0000] {python.py:240} INFO - Done. Returned value was: [{'business_key': 'Vienna_2025-12-17T08:00:00', 'city': 'Vienna', 'latitude': 48.2082, 'longitude': 16.3738, 'temperature_c': 0.7, 'wind_speed_kmh': 7.0, 'wind_direction_deg': 159, 'weather_code': 45, 'observation_time': datetime.datetime(2025, 12, 17, 8, 0), 'ingestion_time': '2025-12-17T08:05:53.837115+00:00'}]
+[2025-12-17T08:05:53.878+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-17T08:05:53.879+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_extract_only, task_id=transform_weather, run_id=manual__2025-12-17T08:05:49.762380+00:00, execution_date=20251217T080549, start_date=20251217T080553, end_date=20251217T080553
+[2025-12-17T08:05:53.936+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-17T08:05:53.970+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T08:05:54.004+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,20 @@
+[2025-12-14T11:00:01.139+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-14T11:00:01.165+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_extract_only.extract_weather scheduled__2025-12-14T10:00:00+00:00 [queued]>
+[2025-12-14T11:00:01.171+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_extract_only.extract_weather scheduled__2025-12-14T10:00:00+00:00 [queued]>
+[2025-12-14T11:00:01.171+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-12-14T11:00:01.186+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): extract_weather> on 2025-12-14 10:00:00+00:00
+[2025-12-14T11:00:01.199+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1063) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-14T11:00:01.197+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_extract_only', 'extract_weather', 'scheduled__2025-12-14T10:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/weather_extract_only.py', '--cfg-path', '/tmp/tmp53o9tthw']
+[2025-12-14T11:00:01.199+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask extract_weather
+[2025-12-14T11:00:01.199+0000] {standard_task_runner.py:72} INFO - Started process 1064 to run task
+[2025-12-14T11:00:01.263+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_extract_only.extract_weather scheduled__2025-12-14T10:00:00+00:00 [running]> on host d598697a787e
+[2025-12-14T11:00:01.351+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_extract_only' AIRFLOW_CTX_TASK_ID='extract_weather' AIRFLOW_CTX_EXECUTION_DATE='2025-12-14T10:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-14T10:00:00+00:00'
+[2025-12-14T11:00:01.352+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-14T11:00:04.833+0000] {logging_mixin.py:190} INFO - Current weather data:
+[2025-12-14T11:00:04.833+0000] {logging_mixin.py:190} INFO - {'time': '2025-12-14T11:00', 'interval': 900, 'temperature': 3.2, 'windspeed': 3.2, 'winddirection': 297, 'is_day': 1, 'weathercode': 3}
+[2025-12-14T11:00:04.833+0000] {python.py:240} INFO - Done. Returned value was: {'time': '2025-12-14T11:00', 'interval': 900, 'temperature': 3.2, 'windspeed': 3.2, 'winddirection': 297, 'is_day': 1, 'weathercode': 3}
+[2025-12-14T11:00:04.859+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-14T11:00:04.860+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_extract_only, task_id=extract_weather, run_id=scheduled__2025-12-14T10:00:00+00:00, execution_date=20251214T100000, start_date=20251214T110001, end_date=20251214T110004
+[2025-12-14T11:00:04.889+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-14T11:00:04.907+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-14T11:00:04.909+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
