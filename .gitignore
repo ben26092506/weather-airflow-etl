@@ -1,0 +1,11 @@
+# Airflow
+logs/
+__pycache__/
+
+# Env & secrets
+.env
+
+# Docker
+*.pid
+
+docker_airflow_setup_komplett.md
